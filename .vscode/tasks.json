@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "mbed compile",
+          "type": "shell",
+          "command": "mbed-tools compile -m $TARGET -t $TOOLCHAIN",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": []
+      }
+  ]
+}

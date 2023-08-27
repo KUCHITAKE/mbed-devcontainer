@@ -1,0 +1,19 @@
+{
+  "name": "mbed-devcontainer",
+  "image": "ghcr.io/armmbed/mbed-os-env:latest",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/var/mbed,type=bind,consistency=cached"
+  ],
+  "runArgs": ["--env-file",".devcontainer/devcontainer.env"],
+  "privileged": true,
+  "postCreateCommand": "bash .devcontainer/deploy.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  },
+  "workspaceFolder": "/var/mbed"
+}
